@@ -1,9 +1,20 @@
-<script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+<script>
+import CardList from '../components/CardList.vue'
+import Continente from '../components/Continente.vue';
+  export default{
+    components: {
+    CardList,
+    Continente
+}
+  }
+
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <div class="container">
+    <h1>Paises</h1>
+    <Continente />
+    <CardList />
+  </div>
+  
 </template>

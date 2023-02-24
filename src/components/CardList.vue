@@ -12,8 +12,11 @@ export default {
             //return store.state.paises
             return store.getters.topPaisesPoblacion;
         });
-        onMounted(() => {
+        onMounted( () => {
             store.dispatch("getPaises");
+            setTimeout(() => {
+                store.dispatch('filtrarRegion', '');
+            }, 500);
         });
         return {
             paises
